@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiArrowUpRight, FiMail } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Contact() {
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -11,6 +16,38 @@ function Contact() {
       y: 0,
       transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
     },
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xppwdoql", {
+        method: "POST",
+        body: new FormData(event.currentTarget),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(
+          result?.errors?.[0]?.message ||
+            "Your message could not be sent. Please try again."
+        );
+      }
+
+      navigate("/submission-success");
+    } catch (error) {
+      setErrorMessage(
+        error.message || "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -80,18 +117,12 @@ function Contact() {
           </motion.div>
 
           <motion.form
-            action="https://formspree.io/f/xppwdoql"
-            method="POST"
+            onSubmit={handleSubmit}
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
             className="space-y-5"
           >
-            <input
-              type="hidden"
-              name="_next"
-              value={`${window.location.origin}/submitted`}
-            />
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="space-y-2">
                 <span className="font-mono text-[10.5px] uppercase tracking-wider text-[#787f8c]">
@@ -148,11 +179,21 @@ function Contact() {
               />
             </label>
 
+            {errorMessage && (
+              <p
+                role="alert"
+                className="border border-[#7f3940] bg-[#29171b] px-4 py-3 text-[13px] leading-relaxed text-[#f0a6aa]"
+              >
+                {errorMessage}
+              </p>
+            )}
+
             <button
               type="submit"
-              className="group inline-flex items-center gap-2 border-b border-[#8C6D3F] pb-1 text-[13.5px] font-medium text-[#ECE9E2] transition-colors duration-300 hover:text-[#A47C48]"
+              disabled={isSubmitting}
+              className="group inline-flex items-center gap-2 border-b border-[#8C6D3F] pb-1 text-[13.5px] font-medium text-[#ECE9E2] transition-colors duration-300 hover:text-[#A47C48] disabled:cursor-not-allowed disabled:opacity-50"
             >
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
               <FiArrowUpRight
                 size={14}
                 className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

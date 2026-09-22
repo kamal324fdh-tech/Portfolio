@@ -29,8 +29,8 @@ function Submission() {
           Thanks for reaching out.
         </h1>
         <p className="mt-5 max-w-md text-[15px] leading-relaxed text-[#9BA0AA]">
-          Your message is on its way. I&apos;ll review it and get back to you
-          soon.
+          Thanks for reaching out. I&apos;ve received your submission and will
+          get back to you as soon as possible.
         </p>
         <Link
           to="/home"

@@ -12,6 +12,7 @@ function Navbar() {
     { name: "About", index: "02", path: "/about" },
     { name: "Projects", index: "03", path: "/projects" },
     { name: "Resume", index: "04", path: "/resume" },
+    { name: "Contact", index: "05", path: "/contact" },
   ];
 
   return (

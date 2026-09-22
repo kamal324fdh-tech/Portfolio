@@ -97,7 +97,7 @@ function Home() {
 
           <motion.div variants={fadeInUp} className="flex flex-wrap gap-8 mt-9">
             <a
-              href="#projects"
+              href="/projects"
               className="group inline-flex items-center gap-2 text-[13.5px] font-medium text-[#ECE9E2] border-b border-[#8C6D3F] pb-1 hover:text-[#8C6D3F] transition-colors duration-300"
             >
               View My Work
@@ -107,7 +107,7 @@ function Home() {
               />
             </a>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 text-[13.5px] font-medium text-[#787f8c] border-b border-transparent hover:border-[#787f8c] hover:text-[#B8BCC4] transition-colors duration-300 pb-1"
             >
               Get In Touch

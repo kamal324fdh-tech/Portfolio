@@ -28,9 +28,12 @@ function Navbar() {
         {/* Wordmark */}
         <Link
           to="/home"
-          className="font-serif text-[20px] tracking-tight text-[#ECE9E2] hover:text-[#A47C48] transition-colors duration-300"
+          aria-label="A. Kamaldeen home"
+          className="font-mono text-[14px] tracking-[0.02em] text-[#ECE9E2] transition-colors duration-300 hover:text-[#A47C48] sm:text-[15px]"
         >
-          A. Kamaldeen
+          <span className="text-[#8C6D3F]">&lt;</span>{" "}
+          <span>A. Kamaldeen</span>{" "}
+          <span className="text-[#8C6D3F]">/&gt;</span>
         </Link>
 
         {/* Desktop Navigation Links */}

@@ -7,7 +7,7 @@ import { getProjects } from "../services/projectService";
 import apexBarberImg from "../assets/images/apex-barber.png";
 import solmarResturantImg from "../assets/images/solmar-resturant.png";
 import meridianDentalImg from "../assets/images/meridian-dental.png";
-import lagosPrimeEstatesImg from "../assets/images/lagosprimeestates.png";
+import lagosPrimeEstatesImg from "../assets/images/lagosPrimeEstates.png";
 import ironDistrictFitnessImg from "../assets/images/iron-district-fitness.png";
 
 // Fallback images by project title

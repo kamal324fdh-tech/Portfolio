@@ -87,6 +87,11 @@ function Contact() {
             variants={fadeInUp}
             className="space-y-5"
           >
+            <input
+              type="hidden"
+              name="_next"
+              value={`${window.location.origin}/submitted`}
+            />
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="space-y-2">
                 <span className="font-mono text-[10.5px] uppercase tracking-wider text-[#787f8c]">

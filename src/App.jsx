@@ -8,6 +8,7 @@ import About from "./component/about";
 import Project from "./component/project";
 import Resume from "./component/resume";
 import Contact from "./component/contact";
+import Submission from "./component/submission";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/projects" element={<Project />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/submitted" element={<Submission />} />
         </Routes>
       </div>
     </BrowserRouter>

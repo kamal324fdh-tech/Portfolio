@@ -110,6 +110,9 @@ function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
+                  sizes="(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 100vw"
                   className="w-full h-full object-cover grayscale-[35%] opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
                 />
               </div>

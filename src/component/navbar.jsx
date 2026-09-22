@@ -8,10 +8,10 @@ function Navbar() {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Home", index: "01", path: "/Home" },
-    { name: "About", index: "02", path: "/About" },
-    { name: "Projects", index: "03", path: "/Projects" },
-    { name: "Resume", index: "04", path: "/Resume" },
+    { name: "Home", index: "01", path: "/home" },
+    { name: "About", index: "02", path: "/about" },
+    { name: "Projects", index: "03", path: "/projects" },
+    { name: "Resume", index: "04", path: "/resume" },
   ];
 
   return (
@@ -26,7 +26,7 @@ function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
         {/* Wordmark */}
         <Link
-          to="/Home"
+          to="/home"
           className="font-serif text-[20px] tracking-tight text-[#ECE9E2] hover:text-[#A47C48] transition-colors duration-300"
         >
           A. Kamaldeen

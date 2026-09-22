@@ -114,10 +114,9 @@ function About() {
             </div>
 
             <p className="text-[15px] text-[#9BA0AA] leading-relaxed">
-              I'm a web creator who thrives on turning complex problems into
-              clean, seamless interfaces. My interest in code started the
-              moment I realized I could take something out of my imagination
-              and make it work, on screen, for someone else to use.
+              I&apos;m Alate Kamaldeen, a junior software engineer and frontend
+              developer. I enjoy turning ideas into polished, functional
+              products with clean interfaces and smooth interactions.
             </p>
 
             <p className="text-[14.5px] text-[#787f8c] mt-6 mb-3 uppercase tracking-wider font-mono text-[11px]">

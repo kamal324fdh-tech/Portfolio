@@ -133,36 +133,35 @@ function Home() {
             </motion.div>
 
             <motion.p variants={fadeInUp} className="text-[15px] text-[#9BA0AA] leading-relaxed">
-              I fell in love with programming because turning ideas into
-              reality through lines of code feels like a small kind of magic.
-              Every project is a chance to solve a real problem and build
-              something people actually enjoy using.
+              I&apos;m Alate Kamaldeen, a junior software engineer and frontend
+              developer who enjoys turning ideas into polished, functional
+              products with clean interfaces and smooth interactions.
             </motion.p>
 
             <motion.p variants={fadeInUp} className="text-[15px] text-[#9BA0AA] leading-relaxed mt-4">
-              I specialize in{" "}
+              I primarily work with{" "}
               <span className="text-[#D8D4CB] font-medium">
-                JavaScript, React.js, Tailwind CSS, HTML5, and CSS3
+                JavaScript, React.js, and Tailwind CSS
               </span>
-              , building clean, scalable, high-performance interfaces with a
-              strong focus on user experience.
+              , building modern, responsive web applications and real-world
+              projects for restaurants, healthcare, real estate, fitness, and
+              e-commerce.
             </motion.p>
 
             <motion.p variants={fadeInUp} className="text-[15px] text-[#9BA0AA] leading-relaxed mt-4">
-              My focus is on{" "}
+              I&apos;m also learning backend development with{" "}
               <span className="text-[#D8D4CB] font-medium">
-                sleek, interactive, responsive, and accessible web applications
-              </span>{" "}
-              — polished code that holds up across every device it's used on.
+                Node.js, Express, and databases
+              </span>
+              , with the goal of becoming a well-rounded full-stack developer.
             </motion.p>
 
             <motion.p variants={fadeInUp} className="text-[15px] text-[#9BA0AA] leading-relaxed mt-4">
-              I'm currently{" "}
+              I&apos;m currently open to{" "}
               <span className="text-[#D8D4CB] font-medium">
-                open to frontend roles, freelance projects, and collaborations
+                frontend roles, freelance projects, and collaborations
               </span>{" "}
-              where I can contribute, keep learning, and help build something
-              worth using.
+              where I can keep learning and contribute to products worth using.
             </motion.p>
           </motion.div>
 

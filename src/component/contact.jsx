@@ -1,5 +1,6 @@
 import React from "react";
-import { FiArrowUpRight, FiMail, FiMessageCircle } from "react-icons/fi";
+import { FiArrowUpRight, FiMail } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 function Contact() {
@@ -57,8 +58,8 @@ function Contact() {
                 rel="noreferrer"
                 className="group inline-flex max-w-full items-center gap-2 border-b border-[#8C6D3F] pb-1 text-[13.5px] font-medium text-[#ECE9E2] transition-colors duration-300 hover:text-[#A47C48]"
               >
-                <FiMessageCircle size={15} aria-hidden="true" />
-                <span>WhatsApp +234 912 841 8599</span>
+                <FaWhatsapp size={16} aria-hidden="true" />
+                <span>DM on WhatsApp</span>
                 <FiArrowUpRight
                   size={14}
                   className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
